@@ -40,6 +40,19 @@ app.get('/api/books/:id', (req, res) => {
     });
 });
 
+app.put('/api/books/:id', (req, res) => {
+  Book.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true
+  })
+    .then(book => {
+      res.json(book);
+      res.redirect('/api/books/')
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 app.delete('/api/books/:id', (req, res) => {
   Book.findByIdAndRemove(req.params.id)
     .then(book => {
