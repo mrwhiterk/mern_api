@@ -6,7 +6,7 @@ Book.remove({})
   .then(() => {
     Book.collection.insert(bookData)
       .then((books) => {
-        console.log(translations)
+        console.log(books)
         process.exit()
       })
   })
