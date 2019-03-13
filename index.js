@@ -46,7 +46,6 @@ app.put('/api/books/:id', (req, res) => {
   })
     .then(book => {
       res.json(book);
-      res.redirect('/api/books/')
     })
     .catch(err => {
       console.log(err);
