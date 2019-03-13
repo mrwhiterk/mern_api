@@ -11,6 +11,7 @@ app.use(parser.json());
 app.use(cors());
 
 app.get('/api/books', (req, res) => {
+  console.log('hit');
   Book.find()
     .then(books => {
       res.json(books);
