@@ -56,7 +56,6 @@ app.put('/api/books/:id', (req, res) => {
 app.delete('/api/books/:id', (req, res) => {
   Book.findByIdAndRemove(req.params.id)
     .then(book => {
-      res.json(book);
       res.redirect('/api/books')
     })
     .catch(err => {
