@@ -11,7 +11,6 @@ app.use(parser.json());
 app.use(cors());
 
 app.get('/api/books', (req, res) => {
-  console.log('hit');
   Book.find()
     .then(books => {
       res.json(books);
@@ -55,9 +54,9 @@ app.put('/api/books/:id', (req, res) => {
 });
 
 app.delete('/api/books/:id', (req, res) => {
-  Book.findByIdAndRemove(req.params.id)
+  Book.findOneAndRemove({ _id: req.params.id })
     .then(book => {
-      res.redirect('/api/books')
+      res.json(book);
     })
     .catch(err => {
       console.log(err);
