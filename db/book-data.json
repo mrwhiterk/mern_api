@@ -1,16 +1,16 @@
 [{
     "title": "Bears",
     "text": "Bears are in the book",
-    "Author": "Tim Smith"
+    "author": "Tim Smith"
   },
   {
     "title": "Cats",
     "text": "Learn about the cats",
-    "Author": "Cat Davis"
+    "author": "Cat Davis"
   },
   {
     "title": "Lovely",
     "text": "A story about lovely things",
-    "Author": "Dr. Suess"
+    "author": "Dr. Suess"
   }
 ]
